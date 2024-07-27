@@ -155,7 +155,6 @@ footer {
 @media (min-width: 768px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
-    overflow: hidden;
   }
 
   #container {
