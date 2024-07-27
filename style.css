@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--text-color)
 }
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-desktop.jpg);
+  --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: white;
   --surface-color: black;
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -14,82 +15,56 @@
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
-/*
-.light {
-  --text-color: white;
-  --bg-url: url(./assets/bg-.jpg);
-  --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color: rgba(0, 0, 0, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/sun.svg);
-}
-  */
-
+/* Global Styles */
 body {
-  /* background-image: url(./assets/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  */
-
-  /* background: color image repeat position/size */
-
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
-  
-}
-
-body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
 #container {
-  width: 360px;
-  max-width: 588px;
-  margin: 56px auto 0px;
-  padding: 0 24px;
+  width: 100%;
+  max-width: 360px;
+  margin: 56px auto 0;
+  padding: 0 16px; /* Reduzido para telas menores */
 }
 
-/* profile */
-
+/* Profile Styles */
 #profile {
   text-align: center;
-  padding: 24px;
+  padding: 16px; /* Reduzido para telas menores */
 }
 
 #profile img {
-  width: 112px;
+  width: 80px; /* Reduzido para telas menores */
 }
 
 #profile p {
   font-weight: 500;
-  line-height: 24px;
+  line-height: 20px; /* Reduzido para melhor ajuste */
   margin-top: 8px;
+  font-size: 14px; /* Reduzido para telas menores */
 }
 
-/* switch */
+/* Switch Styles */
 #switch {
   position: relative;
-  width: 64px;
-
+  width: 56px; /* Reduzido para telas menores */
   margin: 4px auto;
 }
 
 #switch button {
-  width: 32px;
-  height: 32px;
+  width: 28px; /* Reduzido para telas menores */
+  height: 28px; /* Reduzido para telas menores */
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-
   position: absolute;
   top: 50%;
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
-
   animation: slide-back 0.2s;
 }
 
@@ -98,107 +73,81 @@ body * {
 }
 
 #switch button:hover {
-  outline: 8px solid var(--highlight-color);
+  outline: 6px solid var(--highlight-color); /* Reduzido para telas menores */
 }
 
 #switch span {
   display: block;
-  width: 64px;
-  height: 24px;
+  width: 56px; /* Reduzido para telas menores */
+  height: 20px; /* Reduzido para telas menores */
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   border-radius: 999px;
 }
 
-/* links */
+/* Links Styles */
 ul {
   list-style: none;
-
   display: flex;
   flex-direction: column;
-  gap: 16px;
-
-  padding: 24px 0;
+  gap: 12px; /* Reduzido para telas menores */
+  padding: 16px 0; /* Reduzido para telas menores */
 }
 
 ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 16px 24px;
-
+  padding: 12px 16px; /* Reduzido para telas menores */
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
-
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-
   text-decoration: none;
   font-weight: 500;
-
   transition: background 0.2s;
+  font-size: 14px; /* Reduzido para telas menores */
+  color: var(--text-color); /* Define a cor do texto dos links */
 }
 
-/* pesudo-selector */
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
 
-/* social-links */
+/* Social Links Styles */
 #social-links {
   display: flex;
   justify-content: center;
-
-  padding: 24px 0;
-
-  font-size: 24px;
+  padding: 16px 0; /* Reduzido para telas menores */
+  font-size: 20px; /* Reduzido para telas menores */
 }
 
 #social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
-
+  padding: 12px; /* Reduzido para telas menores */
   transition: background 0.2s;
   border-radius: 50%;
+  color: var(--text-color); /* Define a cor do texto dos links sociais */
 }
 
 #social-links a:hover {
   background: var(--highlight-color);
+  
 }
 
-#end {
-  padding: 2px 0;
-  text-align: center;
-  font-size: 14px;
-}
-
-#horario {
-  padding: 2px 0;
-  text-align: center;
-  font-size: 14px;
-}
-
-#contato {
-  padding: 2px 0;
-  text-align: center;
-  font-size: 14px;
-}
-
+/* Footer Styles */
 footer {
-  padding: 24px 0;
+  padding: 16px 0; /* Reduzido para telas menores */
   text-align: center;
-  font-size: 14px;
+  font-size: 12px; /* Reduzido para telas menores */
+  color: var(--text-color)
 }
 
-/* media queries */
-
+/* Media Queries for Larger Screens */
 @media (min-width: 768px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
@@ -206,11 +155,50 @@ footer {
 
   #container {
     max-width: 588px;
-    padding: 0 48px; /* Ajuste para telas maiores */
+    padding: 0 24px; /* Ajuste para telas maiores */
   }
 
   #profile img {
     width: 112px;
+  }
+
+  #profile p {
+    font-size: 16px; /* Ajustado para telas maiores */
+  }
+
+  #switch {
+    width: 64px;
+  }
+
+  #switch button {
+    width: 32px;
+    height: 32px;
+  }
+
+  #switch span {
+    width: 64px;
+    height: 24px;
+  }
+
+  ul {
+    gap: 16px; /* Ajustado para telas maiores */
+    padding: 24px 0;
+  }
+
+  ul li a {
+    padding: 16px 24px;
+    font-size: 16px; /* Ajustado para telas maiores */
+  }
+
+  #social-links {
+    padding: 24px 0;
+    font-size: 24px; /* Ajustado para telas maiores */
+  }
+
+  footer {
+    padding: 24px 0;
+    font-size: 14px; /* Ajustado para telas maiores */
+    color: var(--text-color)
   }
 }
 
