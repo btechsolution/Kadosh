@@ -15,6 +15,11 @@
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
+html, body {
+  height: 100%; /* Garante que o body e html ocupem toda a altura */
+  overflow: hidden; /* Remove a barra de rolagem */
+}
+
 /* Global Styles */
 body {
   background: var(--bg-url) no-repeat top center/cover;
