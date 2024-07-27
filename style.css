@@ -17,7 +17,6 @@
 
 html, body {
   height: 100%; /* Garante que o body e html ocupem toda a altura */
-  overflow: hidden; /* Remove a barra de rolagem */
 }
 
 /* Global Styles */
@@ -26,7 +25,6 @@ body {
   height: 100vh;
   font-family: "Inter", sans-serif;
   color: var(--text-color);
-  overflow: hidden;
 }
 
 #container {
