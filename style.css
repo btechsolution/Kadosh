@@ -201,7 +201,8 @@ footer {
 
 @media (min-width) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
+    --bg-url: url(./assets/bg-mobile.jpg);
+    height: 100vh;
   }
 
   /*
